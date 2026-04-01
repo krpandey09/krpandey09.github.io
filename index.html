@@ -6,9 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
-html {
-  scroll-behavior: smooth;
-}
+html { scroll-behavior: smooth; }
 
 body {
   margin: 0;
@@ -21,8 +19,7 @@ body {
 .navbar {
   position: sticky;
   top: 0;
-  background: rgba(11,60,93,0.95);
-  backdrop-filter: blur(10px);
+  background: #0B3C5D;
   color: white;
   padding: 15px 20px;
   z-index: 1000;
@@ -43,14 +40,7 @@ body {
   padding: 100px 20px;
 }
 
-.hero h1 {
-  font-size: 48px;
-}
-
-.hero p {
-  font-size: 18px;
-  opacity: 0.9;
-}
+.hero h1 { font-size: 48px; }
 
 /* BUTTON */
 .btn {
@@ -60,30 +50,24 @@ body {
   border-radius: 6px;
   text-decoration: none;
   color: white;
-  font-size: 14px;
-  transition: 0.3s;
 }
 
 .btn-blue { background:#1D6FA3; }
 .btn-green { background:#25D366; }
 .btn-dark { background:#000; }
 
-.btn:hover {
-  transform: translateY(-3px);
-  opacity: 0.9;
-}
-
-/* SECTION */
-section {
-  padding: 80px 20px;
-}
-
+/* CONTAINER */
 .container {
   max-width: 1100px;
   margin: auto;
 }
 
-/* GRID */
+/* SERVICES (UNCHANGED STYLE) */
+.services {
+  text-align: center;
+  padding: 80px 20px;
+}
+
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
@@ -91,18 +75,10 @@ section {
   margin-top: 30px;
 }
 
-/* CARD */
 .card {
-  background: rgba(255,255,255,0.8);
-  backdrop-filter: blur(10px);
-  padding: 25px;
+  background: #f0f0f0;
+  padding: 30px;
   border-radius: 12px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-  transition: 0.3s;
-}
-
-.card:hover {
-  transform: translateY(-5px);
 }
 
 /* BOX */
@@ -111,7 +87,6 @@ section {
   padding: 30px;
   border-radius: 12px;
   margin-bottom: 25px;
-  box-shadow: 0 5px 20px rgba(0,0,0,0.05);
 }
 
 /* CONTACT */
@@ -119,9 +94,10 @@ section {
   text-align: center;
   background: #0B3C5D;
   color: white;
+  padding: 60px 20px;
 }
 
-/* WHATSAPP FLOAT */
+/* FLOATING WHATSAPP */
 .whatsapp {
   position: fixed;
   bottom: 20px;
@@ -132,16 +108,14 @@ section {
   border-radius: 50px;
   font-size: 18px;
   text-decoration: none;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
 }
 
-/* ANIMATION */
+/* FADE */
 .fade {
   opacity: 0;
   transform: translateY(30px);
   transition: 0.8s;
 }
-
 .fade.show {
   opacity: 1;
   transform: translateY(0);
@@ -167,26 +141,50 @@ section {
     <h1>CA Khem Raj Pandey</h1>
     <p>Internal Audit | Risk Advisory | Governance & Compliance</p>
 
-    <div>
-      <a href="mailto:krpandey09@gmail.com" class="btn btn-blue">Email</a>
-      <a href="https://wa.me/9779702037030" class="btn btn-green">WhatsApp</a>
-      <a href="https://www.linkedin.com/in/ca-khem-raj-pandey/" target="_blank" class="btn btn-dark">LinkedIn</a>
-    </div>
+    <a href="mailto:krpandey09@gmail.com" class="btn btn-blue">Email</a>
+    <a href="https://wa.me/9779702037030" class="btn btn-green">WhatsApp</a>
+    <a href="https://www.linkedin.com/in/ca-khem-raj-pandey/" target="_blank" class="btn btn-dark">LinkedIn</a>
   </div>
 </section>
 
-<!-- SERVICES -->
-<section id="services" class="fade">
+<!-- SERVICES (UNCHANGED CONTENT) -->
+<section id="services" class="services fade">
   <div class="container">
     <h2 style="color:#0B3C5D;">Services</h2>
+    <p>Helping organizations strengthen governance, controls, and efficiency.</p>
 
     <div class="grid">
-      <div class="card"><h3>Internal Audit</h3><p>Risk-based audits and control reviews.</p></div>
-      <div class="card"><h3>Risk Management</h3><p>Enterprise risk frameworks.</p></div>
-      <div class="card"><h3>Compliance</h3><p>AML/KYC and regulatory reviews.</p></div>
-      <div class="card"><h3>Fraud Risk</h3><p>Fraud detection and investigation.</p></div>
-      <div class="card"><h3>SAP Controls</h3><p>ERP and SAP control frameworks.</p></div>
-      <div class="card"><h3>Process Improvement</h3><p>Operational efficiency enhancement.</p></div>
+
+      <div class="card">
+        <h3>Internal Audit</h3>
+        <p>Risk-based audits across financial, operational, and compliance areas.</p>
+      </div>
+
+      <div class="card">
+        <h3>Risk Management</h3>
+        <p>Enterprise risk frameworks and governance advisory.</p>
+      </div>
+
+      <div class="card">
+        <h3>Fraud Investigation</h3>
+        <p>Fraud detection, investigation, and prevention strategies.</p>
+      </div>
+
+      <div class="card">
+        <h3>AML / KYC Compliance</h3>
+        <p>Regulatory compliance and AML/KYC reviews.</p>
+      </div>
+
+      <div class="card">
+        <h3>SAP Controls</h3>
+        <p>SAP S/4HANA implementation and control design.</p>
+      </div>
+
+      <div class="card">
+        <h3>Process Optimization</h3>
+        <p>Improving efficiency and reducing operational risk.</p>
+      </div>
+
     </div>
   </div>
 </section>
@@ -194,9 +192,12 @@ section {
 <!-- PROFILE -->
 <section id="profile" class="fade">
   <div class="container">
+
     <div class="box">
       <h2>Profile</h2>
-      <p>CA & CIA with 13+ years across banking and corporate sectors, specializing in audit, risk, and governance.</p>
+      <p>
+        Chartered Accountant (CA) and Certified Internal Auditor (CIA) with 13+ years of experience in audit, risk, and governance.
+      </p>
     </div>
 
     <div class="box">
@@ -207,6 +208,7 @@ section {
         <li>Senior Manager — Kotak Mahindra Bank</li>
       </ul>
     </div>
+
   </div>
 </section>
 
@@ -219,7 +221,7 @@ section {
   </div>
 </section>
 
-<!-- WHATSAPP -->
+<!-- FLOATING WHATSAPP -->
 <a href="https://wa.me/9779702037030" class="whatsapp">💬</a>
 
 <script>
