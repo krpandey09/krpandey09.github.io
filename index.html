@@ -27,7 +27,6 @@ body {
   padding: 15px 40px;
   display: flex;
   justify-content: space-between;
-  z-index: 1000;
 }
 
 .navbar a {
@@ -40,104 +39,83 @@ body {
 .hero {
   min-height: 50vh;
   background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
-  background-size: 200% 200%;
-  animation: gradientMove 10s ease infinite;
   color: white;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding: 30px 20px 10px;
-}
-
-@keyframes gradientMove {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
 }
 
 .hero h1 {
   font-size: 40px;
-  margin-bottom: 10px;
 }
 
-.hero p {
-  font-size: 16px;
-}
-
-/* ===== SERVICES (BIG4 STYLE) ===== */
-
-.services {
-  padding: 100px 20px;
-  background: #f8fafc;
+/* COMMON SECTION */
+.section {
+  padding: 80px 20px;
   text-align: center;
 }
 
-.services h2 {
-  font-size: 34px;
-  font-weight: 600;
+.section h2 {
+  font-size: 32px;
   margin-bottom: 10px;
   color: #0f2f44;
 }
 
 .section-subtitle {
-  color: #6b7280;
-  font-size: 16px;
+  color: #666;
   margin-bottom: 50px;
 }
 
 /* GRID */
-.services-grid {
+.grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 35px;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
   max-width: 1100px;
   margin: auto;
 }
 
 /* CARD */
-.service-card {
-  background: #ffffff;
-  padding: 35px 25px;
-  border-radius: 14px;
+.card {
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
   text-align: left;
-  transition: all 0.3s ease;
-  border: 1px solid #e5e7eb;
+  transition: 0.3s;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.05);
 }
 
-/* ICON */
-.icon {
-  font-size: 26px;
-  margin-bottom: 15px;
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.1);
 }
 
-/* TITLE */
-.service-card h3 {
-  font-size: 18px;
+/* HEADER INLINE */
+.card-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
   margin-bottom: 10px;
+}
+
+.card-header .icon {
+  font-size: 20px;
+  background: #eef4f8;
+  padding: 8px;
+  border-radius: 8px;
+}
+
+.card-header h3 {
+  margin: 0;
+  font-size: 18px;
   color: #0f2f44;
 }
 
-/* TEXT */
-.service-card p {
+.card p {
   font-size: 14px;
-  color: #6b7280;
+  color: #555;
   line-height: 1.6;
-}
-
-/* HOVER */
-.service-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 20px 40px rgba(0,0,0,0.08);
-  border-color: transparent;
-}
-
-/* PROFILE */
-.section {
-  padding: 60px 20px;
-  max-width: 900px;
-  margin: auto;
-  text-align: center;
 }
 
 /* FOOTER */
@@ -145,7 +123,7 @@ body {
   background: #0f2f44;
   color: white;
   text-align: center;
-  padding: 30px 20px;
+  padding: 30px;
 }
 
 .footer a {
@@ -154,7 +132,7 @@ body {
   text-decoration: none;
 }
 
-/* WHATSAPP FLOAT */
+/* WHATSAPP */
 .whatsapp {
   position: fixed;
   bottom: 20px;
@@ -175,8 +153,9 @@ body {
   <div><strong>Khem Raj Pandey</strong></div>
   <div>
     <a href="#services">Services</a>
+    <a href="#industries">Industries</a>
+    <a href="#memberships">Memberships</a>
     <a href="#profile">Profile</a>
-    <a href="#contact">Contact</a>
   </div>
 </div>
 
@@ -189,66 +168,93 @@ body {
 </section>
 
 <!-- SERVICES -->
-<section id="services" class="services">
+<section id="services" class="section">
   <h2>Services</h2>
-  <p class="section-subtitle">
-    Delivering risk-focused assurance, governance advisory, and control transformation.
-  </p>
+  <p class="section-subtitle">Delivering risk-focused assurance and governance advisory.</p>
 
-  <div class="services-grid">
+  <div class="grid">
 
-    <div class="service-card">
-      <div class="icon">📊</div>
-      <h3>Internal Audit</h3>
+    <div class="card">
+      <div class="card-header"><div class="icon">📊</div><h3>Internal Audit</h3></div>
       <p>Risk-based audits across financial, operational, and compliance areas.</p>
     </div>
 
-    <div class="service-card">
-      <div class="icon">⚖️</div>
-      <h3>Risk Management & ERM</h3>
+    <div class="card">
+      <div class="card-header"><div class="icon">⚖️</div><h3>Risk Management & ERM</h3></div>
       <p>Enterprise risk frameworks and governance structures.</p>
     </div>
 
-    <div class="service-card">
-      <div class="icon">🏛️</div>
-      <h3>Governance & Board Advisory</h3>
+    <div class="card">
+      <div class="card-header"><div class="icon">🏛️</div><h3>Governance & Board Advisory</h3></div>
       <p>Audit committee reporting and governance advisory.</p>
     </div>
 
-    <div class="service-card">
-      <div class="icon">🔍</div>
-      <h3>Fraud Risk & Investigation</h3>
-      <p>Fraud assessments and investigation support.</p>
+    <div class="card">
+      <div class="card-header"><div class="icon">🔍</div><h3>Fraud Investigation</h3></div>
+      <p>Fraud risk assessments and investigation support.</p>
     </div>
 
-    <div class="service-card">
-      <div class="icon">🛡️</div>
-      <h3>AML / KYC Compliance</h3>
-      <p>Compliance frameworks and regulatory reviews.</p>
+    <div class="card">
+      <div class="card-header"><div class="icon">🛡️</div><h3>AML / KYC Compliance</h3></div>
+      <p>Regulatory compliance frameworks and AML/KYC reviews.</p>
     </div>
 
-    <div class="service-card">
-      <div class="icon">⚙️</div>
-      <h3>SAP Implementation & Controls</h3>
+    <div class="card">
+      <div class="card-header"><div class="icon">⚙️</div><h3>SAP Implementation & Controls</h3></div>
       <p>SAP S/4HANA implementation and control design.</p>
     </div>
 
-    <div class="service-card">
-      <div class="icon">💻</div>
-      <h3>IT Audit</h3>
-      <p>ITGC, system audits, and application controls.</p>
+    <div class="card">
+      <div class="card-header"><div class="icon">💻</div><h3>IT Audit</h3></div>
+      <p>ITGC, system audits, and application control reviews.</p>
     </div>
 
-    <div class="service-card">
-      <div class="icon">📈</div>
-      <h3>Data Analytics</h3>
-      <p>Analytics-driven audit and risk insights.</p>
+    <div class="card">
+      <div class="card-header"><div class="icon">📈</div><h3>Data Analytics</h3></div>
+      <p>Analytics-driven audit insights and risk identification.</p>
     </div>
 
-    <div class="service-card">
-      <div class="icon">🔄</div>
-      <h3>Process Optimization</h3>
-      <p>Process re-engineering and efficiency improvement.</p>
+    <div class="card">
+      <div class="card-header"><div class="icon">🔄</div><h3>Process Optimization</h3></div>
+      <p>Process re-engineering and efficiency improvement initiatives.</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- INDUSTRIES -->
+<section id="industries" class="section">
+  <h2>Industries Served</h2>
+  <div class="grid">
+
+    <div class="card"><p>Banking & Financial Services</p></div>
+    <div class="card"><p>NBFC & Lending Institutions</p></div>
+    <div class="card"><p>Corporate & Manufacturing</p></div>
+    <div class="card"><p>Trading & Distribution</p></div>
+    <div class="card"><p>Professional Services</p></div>
+
+  </div>
+</section>
+
+<!-- MEMBERSHIPS -->
+<section id="memberships" class="section">
+  <h2>Professional Memberships</h2>
+  <div class="grid">
+
+    <div class="card">
+      <div class="card-header">
+        <div class="icon">🎓</div>
+        <h3>Institute of Chartered Accountants of India (ICAI)</h3>
+      </div>
+      <p>Member – Chartered Accountant</p>
+    </div>
+
+    <div class="card">
+      <div class="card-header">
+        <div class="icon">🌍</div>
+        <h3>Institute of Internal Auditors (IIA)</h3>
+      </div>
+      <p>Certified Internal Auditor (CIA)</p>
     </div>
 
   </div>
@@ -263,7 +269,7 @@ body {
 </section>
 
 <!-- FOOTER -->
-<footer id="contact" class="footer">
+<footer class="footer">
   <h3>Contact</h3>
   <p>
     📧 <a href="mailto:krpandey09@gmail.com">Email</a> |
@@ -272,7 +278,6 @@ body {
   </p>
 </footer>
 
-<!-- FLOATING WHATSAPP -->
 <a class="whatsapp" href="https://wa.me/9779702037030" target="_blank">
   WhatsApp
 </a>
